@@ -19,7 +19,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ### Reporting Bugs
 
-- Open a [GitHub Issue](https://github.com/AmanKirmara/ai-tab-notifier/issues/new)
+- Open a [GitHub Issue](https://github.com/A2rjav/ai-tab-notifier/issues/new)
 - Include your Chrome version and OS
 - Describe the steps to reproduce the bug
 - Include screenshots or console logs if possible

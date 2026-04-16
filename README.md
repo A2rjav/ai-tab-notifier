@@ -6,7 +6,7 @@
 
 A Chrome extension that monitors your AI tool tabs and notifies you with sound, desktop notifications, and tab highlights when responses are ready.
 
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://github.com/AmanKirmara/ai-tab-notifier)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://github.com/A2rjav/ai-tab-notifier)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-00C853?logo=google&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
@@ -57,7 +57,7 @@ When multitasking with multiple AI tools — ChatGPT, Claude, Gemini, and others
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AmanKirmara/ai-tab-notifier.git
+   git clone https://github.com/A2rjav/ai-tab-notifier.git
    ```
 
 2. **Open Chrome Extensions**
