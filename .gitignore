@@ -1,0 +1,28 @@
+<![CDATA[# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if using build tools)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# Chrome extension dev artifacts
+*.crx
+*.pem
+*.zip
+
+# Environment files
+.env
+.env.local
+]]>

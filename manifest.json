@@ -1,0 +1,61 @@
+{
+  "manifest_version": 3,
+  "name": "AI Tab Notifier",
+  "version": "1.0.0",
+  "description": "Get notified with sound, popup, and tab highlights when your AI tools finish generating responses. Supports ChatGPT, Claude, Gemini, Perplexity, DeepSeek, Grok, and Copilot.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "AI Tab Notifier"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "notifications",
+    "offscreen",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://www.perplexity.ai/*",
+        "https://perplexity.ai/*",
+        "https://chat.deepseek.com/*",
+        "https://grok.com/*",
+        "https://x.com/i/grok*",
+        "https://copilot.microsoft.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "cycle-ready-tabs": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A"
+      },
+      "description": "Cycle through tabs with ready AI responses"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["sounds/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
