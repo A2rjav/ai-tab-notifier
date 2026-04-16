@@ -1,158 +1,253 @@
 <![CDATA[<div align="center">
 
-# ⚡ AI Tab Notifier
+<img src="assets/banner.png" alt="AI Tab Notifier Banner" width="100%" />
 
-**Never miss an AI response again.**
+<br />
 
-A Chrome extension that monitors your AI tool tabs and notifies you with sound, desktop notifications, and tab highlights when responses are ready.
+### Never miss an AI response again.
 
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?logo=googlechrome&logoColor=white)](https://github.com/A2rjav/ai-tab-notifier)
-[![Manifest V3](https://img.shields.io/badge/Manifest-V3-00C853?logo=google&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+Monitor **ChatGPT** · **Claude** · **Gemini** · **Perplexity** · **DeepSeek** · **Grok** · **Copilot** — all at once.
+
+<br />
+
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/A2rjav/ai-tab-notifier)
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-00C853?style=for-the-badge&logo=google&logoColor=white)](https://developer.chrome.com/docs/extensions/mv3/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-10B981?style=for-the-badge)](CONTRIBUTING.md)
+
+<br />
 
 </div>
 
 ---
 
-## 🎯 The Problem
+## 💡 Why?
 
-When multitasking with multiple AI tools — ChatGPT, Claude, Gemini, and others — you often switch tabs and lose track of which one has finished generating. You end up constantly checking back, wasting time and breaking your flow.
+You're working with 5 AI tabs open — ChatGPT is thinking, Claude is writing, Gemini is analyzing. You switch to your code editor. **30 seconds later, you've forgotten which tab finished.** You start tab-hopping, wasting focus.
 
-## ✨ The Solution
-
-**AI Tab Notifier** watches your AI tabs in the background and alerts you the instant a response is ready — with sound, a desktop notification, and a visual badge. Stay focused on your work and let the extension handle the monitoring.
+**AI Tab Notifier** fixes this. It watches every AI tab in the background and hits you with a sound + notification the _instant_ a response lands. Zero tab-checking. Pure flow state.
 
 ---
 
-## 🚀 Features
+## 📸 Preview
 
-| Feature | Description |
-|---|---|
-| 🔔 **Sound Notifications** | Choose from 3 built-in sounds (Chime, Ping, Success) with adjustable volume |
-| 💬 **Desktop Notifications** | Native OS notifications with click-to-focus |
-| ⚡ **Title Flash** | Tab title flashes "⚡ Response Ready!" so you can spot it in your tab bar |
-| 🏷️ **Badge Indicators** | Green (✓ ready) and orange (... generating) badges on the extension icon |
-| 🎯 **Tab Cycling** | Press `Ctrl+Shift+A` to cycle through tabs with ready responses |
-| ⏱️ **Auto-Dismiss** | Notifications auto-clear after a configurable timeout |
-| 🎛️ **Per-Platform Control** | Enable/disable monitoring for each AI tool individually |
+<div align="center">
+<table>
+<tr>
+<td align="center" width="50%">
+<img src="assets/popup-preview.png" alt="Active Tabs Panel" width="380" />
+<br />
+<sub><b>Active Tabs</b> — Live status of all monitored AI tabs</sub>
+</td>
+<td align="center" width="50%">
+<img src="assets/settings-preview.png" alt="Settings Panel" width="380" />
+<br />
+<sub><b>Settings</b> — Full control over sounds, notifications & platforms</sub>
+</td>
+</tr>
+</table>
+</div>
+
+---
+
+## ⚡ Features
+
+<table>
+<tr>
+<td width="60">🔊</td>
+<td><b>Sound Alerts</b></td>
+<td>3 built-in sounds (Chime, Ping, Success) with volume control. Web Audio API fallback ensures it always works.</td>
+</tr>
+<tr>
+<td>💬</td>
+<td><b>Desktop Notifications</b></td>
+<td>Native OS notifications — click to jump straight to the ready tab.</td>
+</tr>
+<tr>
+<td>⚡</td>
+<td><b>Title Flash</b></td>
+<td>Tab title flashes <code>⚡ Response Ready!</code> so you can spot it instantly in your tab bar.</td>
+</tr>
+<tr>
+<td>🏷️</td>
+<td><b>Smart Badges</b></td>
+<td>Green <code>✓</code> = ready, Orange <code>...</code> = generating. Visible on the extension icon at a glance.</td>
+</tr>
+<tr>
+<td>⌨️</td>
+<td><b>Keyboard Shortcut</b></td>
+<td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd> — instantly cycle through tabs with ready responses.</td>
+</tr>
+<tr>
+<td>🎛️</td>
+<td><b>Per-Platform Control</b></td>
+<td>Toggle monitoring for each AI tool individually. Disable what you don't use.</td>
+</tr>
+<tr>
+<td>⏱️</td>
+<td><b>Auto-Dismiss</b></td>
+<td>Notifications auto-clear after 5s, 10s, 30s — or never. Your choice.</td>
+</tr>
+<tr>
+<td>📋</td>
+<td><b>History Log</b></td>
+<td>See a timeline of all past notifications. Click any to jump to that tab.</td>
+</tr>
+</table>
+
+---
 
 ## 🤖 Supported Platforms
 
-| Platform | URL |
-|---|---|
-| **ChatGPT** | `chat.openai.com` / `chatgpt.com` |
-| **Claude** | `claude.ai` |
-| **Gemini** | `gemini.google.com` |
-| **Perplexity** | `perplexity.ai` |
-| **DeepSeek** | `chat.deepseek.com` |
-| **Grok** | `grok.com` / `x.com/i/grok` |
-| **Copilot** | `copilot.microsoft.com` |
+| Platform | Status | URLs |
+|:---|:---:|:---|
+| 🤖 **ChatGPT** | ✅ | `chatgpt.com` · `chat.openai.com` |
+| 🧠 **Claude** | ✅ | `claude.ai` |
+| ✨ **Gemini** | ✅ | `gemini.google.com` |
+| 🔍 **Perplexity** | ✅ | `perplexity.ai` |
+| 🌊 **DeepSeek** | ✅ | `chat.deepseek.com` |
+| ⚡ **Grok** | ✅ | `grok.com` · `x.com/i/grok` |
+| 🚀 **Copilot** | ✅ | `copilot.microsoft.com` |
+
+> **Want more?** Adding a new platform is ~20 lines of config. See [Contributing](#-contributing).
 
 ---
 
-## 📦 Installation
+## 📦 Install
 
-### From Source (Developer Mode)
+### Option 1: Load from source (recommended)
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/A2rjav/ai-tab-notifier.git
-   ```
+```bash
+# 1. Clone
+git clone https://github.com/A2rjav/ai-tab-notifier.git
 
-2. **Open Chrome Extensions**
-   - Navigate to `chrome://extensions/`
-   - Enable **Developer mode** (toggle in top-right)
+# 2. Open Chrome → chrome://extensions → Enable "Developer mode"
 
-3. **Load the extension**
-   - Click **"Load unpacked"**
-   - Select the `ai-tab-notifier` folder
+# 3. Click "Load unpacked" → select the ai-tab-notifier folder
 
-4. **Pin the extension** (optional)
-   - Click the puzzle piece icon in Chrome toolbar
-   - Pin **AI Tab Notifier** for easy access
+# 4. Pin the extension from the puzzle piece icon. Done! 🎉
+```
+
+### Option 2: Download ZIP
+
+1. Click the green **Code** button above → **Download ZIP**
+2. Extract the folder
+3. Load it as unpacked in `chrome://extensions`
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ How It Works
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    CHROME BROWSER                       │
+│                                                         │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐              │
+│  │ ChatGPT  │  │  Claude  │  │  Gemini  │  ...more     │
+│  │   Tab    │  │   Tab    │  │   Tab    │              │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘              │
+│       │              │              │                    │
+│       ▼              ▼              ▼                    │
+│  ┌──────────────────────────────────────┐               │
+│  │         content.js (per tab)         │               │
+│  │  MutationObserver watches DOM for:   │               │
+│  │  • Stop buttons (generating)         │               │
+│  │  • Send buttons (idle/ready)         │               │
+│  │  • Loading indicators                │               │
+│  └──────────────────┬───────────────────┘               │
+│                     │ chrome.runtime.sendMessage         │
+│                     ▼                                    │
+│  ┌──────────────────────────────────────┐               │
+│  │     background.js (service worker)   │               │
+│  │  • Manages tab states                │               │
+│  │  • Triggers notifications            │               │
+│  │  • Updates badges                    │               │
+│  │  • Coordinates everything            │               │
+│  └───────┬──────────┬───────────────────┘               │
+│          │          │                                    │
+│          ▼          ▼                                    │
+│  ┌────────────┐  ┌─────────────────┐                    │
+│  │ offscreen  │  │  OS Notification │                   │
+│  │  .html/.js │  │  (chrome.notif)  │                   │
+│  │ 🔊 Audio  │  │  💬 Desktop     │                    │
+│  └────────────┘  └─────────────────┘                    │
+└─────────────────────────────────────────────────────────┘
+```
+
+### File Structure
 
 ```
 ai-tab-notifier/
-├── manifest.json        # Extension config (Manifest V3)
-├── background.js        # Service worker — orchestrates everything
-├── content.js           # Content script — detects AI response states via MutationObserver
-├── popup.html           # Extension popup UI
-├── popup.js             # Popup logic — tabs, history, settings
-├── popup.css            # Premium popup styling
-├── offscreen.html       # Offscreen document for audio playback
-├── offscreen.js         # Audio bridge (Web Audio API fallback)
-├── icons/               # Extension icons (16, 48, 128px)
-└── sounds/              # Notification sounds (MP3)
+├── manifest.json          # Extension config (Manifest V3)
+├── background.js          # Service worker — orchestrates state, badges, notifications
+├── content.js             # Injected per AI tab — MutationObserver + polling
+├── popup.html / js / css  # Extension popup — tabs, history, settings UI
+├── offscreen.html / js    # Audio bridge (service workers can't play audio)
+├── icons/                 # Extension icons (16px, 48px, 128px)
+├── sounds/                # Notification sounds (gentle-chime, ping, success)
+└── assets/                # README images
 ```
 
-### How It Works
+### Detection Strategy
 
-1. **Content Script** (`content.js`) is injected into supported AI platform pages
-2. A `MutationObserver` watches the DOM for generating/idle state changes (stop buttons, loading indicators, etc.)
-3. When a response finishes, the content script sends a message to the **Background Service Worker**
-4. The service worker triggers:
-   - 🔊 Sound via the **Offscreen Document** (since service workers can't use Web Audio)
-   - 💬 Desktop notification via `chrome.notifications`
-   - 🏷️ Badge update on the extension icon
-   - ⚡ Title flash command back to the content script
+The content script uses a **dual approach** for maximum reliability:
+
+1. **`MutationObserver`** — Reacts to DOM changes in real-time (class changes, new elements, attribute mutations)
+2. **Polling fallback** — Checks every 1.5s to catch edge cases the observer might miss
+
+For each platform, we look for **generating indicators** (stop buttons, loading spinners, `animate-pulse` classes) and **idle indicators** (send buttons, enabled textareas). The state machine: `idle → generating → ready → idle`.
 
 ---
 
 ## ⚙️ Configuration
 
-Open the extension popup to customize:
+Everything is configurable from the popup:
 
-- **🔊 Sound** — Toggle on/off, adjust volume, pick a sound style
-- **💬 Notifications** — Enable/disable desktop notifications
-- **🏷️ Tab Highlighting** — Highlight tabs with ready responses
-- **⚡ Title Flash** — Flash the tab title when a response is ready
-- **⏱️ Auto-Dismiss** — Set to 5s, 10s, 30s, or never
-- **🎛️ Platform Toggles** — Enable/disable each AI platform individually
+| Setting | Options | Default |
+|:---|:---|:---|
+| Sound | On/Off + Volume slider | ✅ On, 70% |
+| Sound Style | 🔔 Chime · 🏓 Ping · 🎉 Success | 🔔 Chime |
+| Desktop Notifications | On/Off | ✅ On |
+| Tab Highlighting | On/Off | ✅ On |
+| Title Flash ⚡ | On/Off | ✅ On |
+| Auto-Dismiss | 5s · 10s · 30s · Never | 10s |
+| Platform Toggles | Per-platform on/off | All ✅ |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
 
-1. **Fork** this repository
-2. **Create a branch** for your feature: `git checkout -b feature/amazing-feature`
-3. **Commit** your changes: `git commit -m 'Add amazing feature'`
-4. **Push** to the branch: `git push origin feature/amazing-feature`
-5. Open a **Pull Request**
+```bash
+# Fork → Clone → Branch → Code → PR
+git checkout -b feature/awesome-thing
+git commit -m "Add: awesome thing"
+git push origin feature/awesome-thing
+```
 
-### Ideas for Contributions
+### 💡 Contribution Ideas
 
-- 🆕 Add support for more AI platforms (Mistral, Meta AI, etc.)
-- 🎨 Custom notification sounds (upload your own)
-- 🌐 Localization / i18n support
-- 📊 Usage statistics dashboard
-- 🔧 Firefox / Edge extension ports
+- 🆕 **New platforms** — Mistral, Meta AI, Phind, You.com
+- 🎵 **Custom sounds** — Let users upload their own notification sounds
+- 🌐 **i18n** — Translate the UI to other languages
+- 🦊 **Firefox port** — Adapt for Firefox extensions API
+- 📊 **Analytics** — Track how many responses you get per day
+- 🎨 **Themes** — Light mode, custom accent colors
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- Built with ❤️ for AI power users who multitask like pros
-- Uses Chrome's [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/) APIs
-- Offscreen document pattern for reliable audio in service workers
+MIT — do whatever you want with it. See [LICENSE](LICENSE).
 
 ---
 
 <div align="center">
 
-**If this extension saves you time, give it a ⭐!**
+**Built with ❤️ for AI power users who refuse to waste time tab-checking.**
+
+⭐ **Star this repo** if it saves you even one tab-switch.
 
 </div>
 ]]>
