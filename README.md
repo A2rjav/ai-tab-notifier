@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 <img src="assets/banner.png" alt="AI Tab Notifier Banner" width="100%" />
 
@@ -250,4 +250,3 @@ MIT — do whatever you want with it. See [LICENSE](LICENSE).
 ⭐ **Star this repo** if it saves you even one tab-switch.
 
 </div>
-]]>
